@@ -1,5 +1,8 @@
-package  br.com.zenon
+package  br.com.zenon;
 
+import java.math.BigDecimal;
 
-public class Transaction {
+public record Transaction(int step, TransactionType type, BigDecimal amount, TransactionCustomer origin,
+                          TransactionCustomer recipient, boolean isFraud, boolean isFlaggedFraud) {
+
 }
